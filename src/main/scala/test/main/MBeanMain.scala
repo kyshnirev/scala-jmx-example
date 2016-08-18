@@ -2,12 +2,12 @@ package test.main
 
 import java.lang.management.ManagementFactory
 import javax.management.ObjectName
-import test.mbean.Status
+import test.mbean.CharCounter
 import scala.io.StdIn
 
 object MBeanMain extends App {
 
-  val mbean = new Status
+  val mbean = new CharCounter
   val c = mbean.getClass
   ManagementFactory.getPlatformMBeanServer.registerMBean(
       mbean,

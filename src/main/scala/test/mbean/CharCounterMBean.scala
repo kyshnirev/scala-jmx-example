@@ -1,12 +1,12 @@
 package test.mbean
 
 // define an "interface" (name ends with "MBean"!)
-trait StatusMBean {
+trait CharCounterMBean {
   def getAllChars : String
   def getCharsCount : Array[String]
 }
 
-class Status extends StatusMBean {
+class CharCounter extends CharCounterMBean {
 
   private val cmap = new scala.collection.mutable.HashMap[Char, Int].withDefaultValue(0)
 
